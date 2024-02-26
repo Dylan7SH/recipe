@@ -1,0 +1,106 @@
+html {
+    font-family:'Bebas Neue', cursive;
+    font-size: 20px;
+    background-color: rgba(122,191,191,.5);
+}
+
+body {
+    width: 414px;
+    background-color: #ffff;
+    margin: 0 auto;
+}
+
+header, nav {
+    background-color: #F2F2F2;
+}
+
+header {
+    padding-top: 180px;
+    text-align: center;
+}
+main p, dd, dt, #ingredients li, input {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+aside {
+    background-color: #7ABFBF;
+}
+
+svg, img {
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 40px;
+}
+
+/* Main Recipe */
+
+main {
+    display: flex;
+    background-color: #F2F2F2;
+    flex-direction: column;
+}
+
+menu {
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.svgactions li {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.svgactions li a {
+    text-decoration: none;
+    display: block;
+    color: #EB5428;
+    transition: color .8s ,background-color .5s, border-radius .5s;
+}
+
+.svgactions li a:hover {
+    color: #7ABFBF;
+    background-color: #F2F2F2; 
+    border-radius: 5px;
+}
+
+main img {
+    width: 100%;
+}
+
+main p {
+    padding: 0 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    margin: 12px;
+}
+
+.list {
+    flex-direction: column;
+    display: flex;
+    justify-items: center;
+    padding-left: 20px;
+}
+
+.list dl {
+    margin: 0;
+    height: fit-content;
+}
+
+dt {
+    font-weight: 700;
+    display: inline-block;
+    text-align: end;
+}
