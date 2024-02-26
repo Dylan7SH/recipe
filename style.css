@@ -6,7 +6,7 @@ html {
 
 body {
     width: 414px;
-    background-color: #ffff;
+    background-color: #fff;
     margin: 0 auto;
 }
 
@@ -14,11 +14,7 @@ header, nav {
     background-color: #F2F2F2;
 }
 
-header {
-    padding-top: 180px;
-    text-align: center;
-}
-main p, dd, dt, #ingredients li, input {
+main p, dd, dt, .ingredients li, input {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -34,6 +30,11 @@ svg, img {
 h1 {
     margin: 0;
     font-size: 40px;
+}
+
+header {
+    padding-top: 180px;
+    text-align: center;
 }
 
 /* Main Recipe */
@@ -103,4 +104,221 @@ dt {
     font-weight: 700;
     display: inline-block;
     text-align: end;
+}
+
+dd {
+    margin-left: 5px;
+    padding: 0px;
+    text-align: left;
+    display: inline;
+}
+
+.directions {
+    font-size: 16px;
+    padding-bottom: 0;
+}
+
+#directions ol li {
+    padding: 10px;
+    
+}
+
+.ingredients li {
+    padding-bottom: 14px;
+    list-style: square;
+    font-family: 'Montserrat', sans-serif;
+}
+/* Side Dishes */
+
+aside {
+    padding-bottom: 10px;
+    background-color: #7ABFBF;
+}
+
+aside h2 {
+    padding: 10px;
+    margin: 0;
+}
+
+aside figure {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-rows: .24fr .5fr 65px;
+    transition: background-color 1s linear, color .5s;
+}
+
+aside figure:hover {
+    background-color: #0d0d0d;
+    color: #7ABFBF;
+}
+
+aside img {
+    width: 100%;
+    grid-row: span 3;
+}
+
+aside h3 {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 25px;
+    margin: 0 10px 10px;
+}
+
+aside figcaption {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    grid-column: 2;
+    grid-row: 2;
+    height: fit-content;
+    margin-left: 10px;
+}
+
+aside dt {
+    grid-column: 2;
+    grid-row: 3;
+    display: inline;
+}
+
+aside dd {
+    display: flex;
+    margin-left: 10px;
+}
+
+aside dd a {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+}
+
+/* Navigation */
+
+nav h2 {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+nav {
+    height: 180px;
+    width: inherit;
+    position: absolute;
+    top: 0;
+}
+
+nav label {
+    display: inline-block;
+    user-select: none;
+    height: 60px;
+    padding: 10px 20px;
+    background-color: #fff;
+}
+
+nav span, nav li:last-child {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav span, nav li a {
+    transition: color 1s, background-color 1s ease-in-out, border-radius 1s;
+    color: #0d0d0d;
+}
+
+nav span a:hover, nav li:last-child a:hover {
+    border-radius: 5px;
+    color:#fff;
+    background-color: #EB5428;
+}
+
+nav input #menu-btn {
+    display: none;
+}
+
+nav ul {
+    overflow: hidden;
+    max-height: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    transition: max-height .5s ease-out;
+}
+
+#menu-btn:checked ~ ul {
+    max-height: 600px;
+    z-index: 1;
+}
+
+nav img {
+    visibility: hidden;
+    width: 0;
+}
+
+nav li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    background-color: #7ABFBF;
+    text-align: center;
+    padding: 10px 0;
+    transition: background-color 1s ease-in-out;
+}
+
+
+nav li:hover {
+    background-color: #fff
+}
+
+nav a {
+    text-decoration: none; color: #0d0d0d;
+}
+
+nav li:first-child {
+    position: absolute;
+    top: 0;
+    right: 90px;
+    width: 245px;
+    height: 80px;
+    padding: 0;
+    background-color: #EB5428;
+
+}
+
+nav li:first-child a {
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+nav li:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+div .search {
+    position: absolute;
+    top: 90px;
+    left: 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.search input {
+    border: 3px solid #EB5428;
+    padding: 1px;
+    width: 280px;
+    height: 50px;
 }
