@@ -14,7 +14,7 @@ header, nav {
     background-color: #F2F2F2;
 }
 
-main p, dd, dt, .ingredients li, input {
+main p, dd, dt, .ingredients li, ol, input {
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -130,17 +130,17 @@ dd {
 }
 /* Side Dishes */
 
-aside {
+.aside {
     padding-bottom: 10px;
     background-color: #7ABFBF;
 }
 
-aside h2 {
+.aside h2 {
     padding: 10px;
     margin: 0;
 }
 
-aside figure {
+.aside figure {
     margin: 10px;
     display: grid;
     grid-template-columns: 130px 1fr;
@@ -148,24 +148,26 @@ aside figure {
     transition: background-color 1s linear, color .5s;
 }
 
-aside figure:hover {
-    background-color: #0d0d0d;
+.aside figure:hover {
+    background-color: #fff;
     color: #7ABFBF;
 }
 
-aside img {
+.aside img {
     width: 100%;
     grid-row: span 3;
+    height: 99%;
+    margin-top: 2px;;
 }
 
-aside h3 {
+.aside h3 {
     grid-column: 2;
     grid-row: 1;
     font-size: 25px;
     margin: 0 10px 10px;
 }
 
-aside figcaption {
+figcaption { 
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     grid-column: 2;
@@ -174,23 +176,26 @@ aside figcaption {
     margin-left: 10px;
 }
 
-aside dt {
+.aside dt {
     grid-column: 2;
     grid-row: 3;
     display: inline;
+    margin-left: 10px;
 }
 
-aside dd {
+.aside dd {
     display: flex;
     margin-left: 10px;
 }
 
-aside dd a {
+.aside a {
     margin: 0;
     padding: 0;
     display: flex;
-    text-decoration: none;
+    text-decoration: none;   
 }
+
+
 
 /* Navigation */
 
@@ -211,6 +216,8 @@ nav {
 nav label {
     display: inline-block;
     user-select: none;
+    margin-left: -19px;
+    width: 60px;
     height: 60px;
     padding: 10px 20px;
     background-color: #fff;
@@ -228,9 +235,10 @@ nav span, nav li a {
 }
 
 nav span a:hover, nav li:last-child a:hover {
-    border-radius: 5px;
+    border-radius: 4px;
     color:#fff;
     background-color: #EB5428;
+    transition: background-color .1s ease-in-out;
 }
 
 nav input #menu-btn {
@@ -245,6 +253,7 @@ nav ul {
     margin: 0;
     transition: max-height .5s ease-out;
 }
+
 
 #menu-btn:checked ~ ul {
     max-height: 600px;
@@ -263,9 +272,8 @@ nav li {
     background-color: #7ABFBF;
     text-align: center;
     padding: 10px 0;
-    transition: background-color 1s ease-in-out;
+    transition: background-color .1s ease-in-out;
 }
-
 
 nav li:hover {
     background-color: #fff
@@ -274,14 +282,14 @@ nav li:hover {
 nav a {
     text-decoration: none; color: #0d0d0d;
 }
-
+/* logo */
 nav li:first-child {
     position: absolute;
     top: 0;
     right: 90px;
-    width: 245px;
+    width: 230px;
     height: 80px;
-    padding: 0;
+    padding: 0px;
     background-color: #EB5428;
 
 }
@@ -298,17 +306,18 @@ nav li:last-child {
     position: absolute;
     top: 0;
     right: 0;
-    width: 90px;
+    width: 100px;
     height: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #fff; 
 }
 
-div .search {
-    position: absolute;
-    top: 90px;
+
+.search {
+    position: relative;
+    top: 20px;
     left: 40px;
     padding-bottom: 40px;
     display: flex;
@@ -318,7 +327,108 @@ div .search {
 
 .search input {
     border: 3px solid #EB5428;
-    padding: 1px;
+    padding: 1.5px;
     width: 280px;
     height: 50px;
+    margin-top: 10px;
 }
+
+nav button {
+    background-color: #EB5428;
+    border: 2px solid #EB5428;
+    margin-top: 9.5px;
+
+}
+
+#menu-btn {
+    visibility: hidden;
+}
+
+/* footer/social media */
+
+footer ul {
+    margin: 0 auto;
+    padding: 10px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+footer section p {
+    text-align: center;
+    line-height: 1rem;
+}
+
+footer h2 {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+footer h3 {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+footer img {
+    justify-content: center;
+    width: 50%;
+    margin-left: 100px;
+}
+
+/* Medium Viewport */
+@media screen and (min-width: 788px) {
+    body {
+        width: 788px;
+    }
+
+    h1 {
+        text-align: left;
+        padding-left: 10px;
+    }
+
+    menu {
+        position: absolute;
+        width: 768px;
+        background-color: rgba(255 ,255 ,255 ,.5);
+    }
+
+    .recipe {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .5fr 1fr;
+    }
+
+    .details {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+
+    .list {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .details {
+        height: fit-content;
+    }
+
+    .ingredients{
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .directions {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .sides {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+    
