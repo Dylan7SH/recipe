@@ -567,16 +567,141 @@ footer img {
     menu {
         display: block;
         width: fit-content;
-        height: 652px;
+        height: 628px;
         background-color: #fff;
         border: 2px solid #EB5428;
     }
 
     main img {
-        width: 35%;
-        margin-left: 130px;
+        height: 652px;
+        width: 633px;
+        margin-left: 120px;
         margin-right: 0;
         display: inline;
     }
+
+    .caption {
+        width: 832px;
+        display: inline;
+    }
+
+    .caption p {
+        line-height: 35px;
+        margin-top: 5px;
+    }
+
+    .details {
+        color: #7ABFBF;
+        background: #0d0d0d;
+    }
+
+    .recipe {
+        grid-template-columns: .5fr 2fr;
+        grid-template-rows: .2fr 1fr;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        justify-items: center;
+    }
+
+    .list dl {
+        margin: auto;
+    }
+
+    .list dt, .list dd {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin-left: -275px;
+    }
+
+    .sides {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .aside figure {
+        display: flex;
+        flex-direction:column-reverse; 
+    }
+
+    figure dl {
+        margin: 0;
+        order: 1;
+    }
+
+    .aside dt {
+        margin-left: 2px;
+        margin-top: 2px;
+    }
+
+    figcaption {
+        order: 2;
+        margin-left: 2px;
+        line-height: 2rem;
+    }
+
+    figure h3 {
+        order: 3;
+        margin-bottom: 0px;
+        padding-top: 10px;
+    }
+
+    figure img {
+        order: 4;
+        width: 35vh;
+    }
+
+    nav {
+        height: 80px;
+    }
+
+    nav ul {
+        width: 80%;
+        margin-top: -50px;
+        margin-left: 130px;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .search {
+        top: 100px;
+        justify-content: center;
+        margin-left: -150px;
+    }
+
+    footer {
+        justify-content: space-between;
+        display: flex;
+    }
+
+    footer > section {
+        width: 50%;
+    }
+    footer ul {
+        width: 90%;
+    }
+
+    .last {
+        flex-direction: row-reverse;
+        margin-right: 300px;
+    }
+
+    .last {
+        margin-left: 30px;
+        padding-top: 15px;
+    }
+
+    .last p {
+        margin-left: 300px;
+        margin-top: -70px;
+    }
+
+    .last img {
+        margin: 20px;
+        width: 300px;
+    }
 }
-    
